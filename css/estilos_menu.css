@@ -1,0 +1,378 @@
+@charset "utf-8";    
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 no admite ancho máximo, por lo que el ancho predeterminado es 100%. */
+.ie6 img {
+	width:100%;
+} 
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html,body{
+    margin: 0px;
+    height: 100%;
+} 
+/* Diseño Mobile: 480px y menos. */
+
+/* Diseño Tablet: 481px a 768px. Hereda estilos de diseño mobile. */
+@media only screen and (min-width: 481px) {
+     
+}    
+/* Diseño Desktop: 769px a un maximo de 1600px. Hereda estilos de: Diseño mobile y tablet */
+@media only screen and (min-width: 900px) {
+    .menu{
+        width: 100%;
+        padding: 15px 4%;
+    }
+    .contenedor_cubo{
+        width: 100%;
+        display: flex;
+        padding: 15px 0;
+        flex-wrap: wrap;
+    }    
+    .cubo{
+        height: 120px;
+        width: 150px;
+        border: 1px solid rgba(0,0,0,0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 15px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative;
+    }
+    
+    .blur{ 
+        background-color: transparent; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+    .cubo_plus{
+        font-size: 65px;
+        font-weight: 600;
+        color: #666;
+    }
+    .cubo img{
+        width: 40px;
+    }
+    .cubo p{
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+        color: #333; 
+    }
+    
+    .menu_detalle{
+        width: 96%;
+        margin-left: 1%;
+        margin-right: 1%;
+        border: 1px solid rgba(0,0,0,0.3);
+        padding: 15px;
+        padding-top: 45px;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        position: relative;
+    }
+    .option-menu{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+        height: 50px;
+        padding-left: 40px;
+        align-items: center;
+    } 
+    .option-menu a{
+        margin: 0 17px;
+        background: rgba(0,0,0,0.2);
+        width: 35px;
+        height: 35px;
+        border-radius: 2em;
+    }
+    .cancel-box{
+        margin: 0 17px;
+        background: rgba(255,0,0,0.5);
+        width: 35px;
+        height: 35px;
+        border-radius: 2em;
+        position: absolute;
+        right: 40px;
+        cursor: pointer;
+    }
+    .menu_detalle ul{
+        list-style: none;
+    }
+    .menu_detalle ul li{
+        border-bottom: 1px dashed rgba(0,0,0,0.3);
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 21px;
+        color: #333;
+    }
+    .menu_detalle ul li:last-child{
+        border: none;
+        justify-content: center;
+    } 
+    .menu_detalle ul li button{
+        padding: 8px 14px;
+        border: 1px solid rgba(0,0,0,0.5); 
+        color: #444;
+        background: #fff;
+        font-size: 16px;
+        margin: 0 10px;
+        box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+        cursor: pointer;
+        border-radius: 7px;
+    }  
+    .but-dct{
+        background-color: rgba(0,255,0,0.4) !important;
+    }
+    .but-dlt{
+        background-color: rgba(255,0,0,0.4) !important;
+    }
+    .deshabil,
+    .deshabil button,
+    .deshabil-only,
+    .deshabil-only button{
+        background-color: rgba(0,0,0,0.2) !important;
+    } 
+    
+    .md_info{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+    .md_boton{
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 20px;
+    }
+    
+    /*------ medium -------*/
+    .titu_edit{
+        text-align: center;
+        padding-top: 45px;
+        font-size: 35px;
+        color: #333;
+    }
+    .medium{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 35px 70px;
+        border: 1px solid rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        width: 550px;
+        align-items: center;
+        border-radius: 7px;
+    } 
+    .medium h3{
+        margin-bottom: 25px;
+        font-size: 19px;
+        color: #444;
+        font-weight: 200;
+    }
+    .medium h3 span{
+        font-weight: 600; 
+    }
+    .medium label{
+        font-size: 19px;
+        color: #444;
+        position: relative;
+    }  
+    .medium input[type=text]{
+        padding: 7px;
+        text-align: left;
+        font-size: 17px;
+        border: 1px solid rgba(0,0,0,0.2);
+        margin: 7px;
+        background: #fff;
+        color: #333;
+        box-shadow: none;
+        border-radius: 5px;
+    }  
+    .medium input[type=number]{
+        padding: 7px;
+        text-align: left;
+        font-size: 17px;
+        border: 1px solid rgba(0,0,0,0.2);
+        margin: 7px;
+        background: #fff;
+        color: #333;
+        box-shadow: none;
+        border-radius: 5px;
+    } 
+    .medium input[type=date]{
+        padding: 7px;
+        text-align: left;
+        font-size: 17px;
+        border: 1px solid rgba(0,0,0,0.2);
+        margin: 7px;
+        background: #fff;
+        color: #333;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+    input[type=number] { -moz-appearance:textfield; }
+    
+    .leter-d-edi{
+        position: absolute;
+        right: -80px;
+        bottom: 0;
+        color: #444;
+        font-size: 16px;
+    }
+    .lab-precio{
+        margin-right: 56px;
+    }
+    .leter-porcent{
+        position: absolute;
+        right: -29px; 
+        bottom: 0;
+        color: #444;
+        font-size: 15px;
+    }
+    .label-porcent{
+        margin-right: 0;
+    }
+    .leter-d-des{
+        position: absolute;
+        right: -58px; 
+        bottom: 0;
+        color: #444;
+        font-size: 16px;
+    }   
+    .label-d-des{
+        margin-right: 31px;
+    }
+    .fecha-in{
+        margin-right: 58px;
+    }
+    .fecha-ex{
+        margin-right: 40px;
+    }
+    .tipo-check{
+        margin-right: 7px;
+        margin-bottom: 7px;
+        display: inline-block;
+    } 
+    .lab-descrip{
+        margin-right: 10px;
+    }
+    
+    #descrip{
+        width: 270px;
+    }
+    #caja_uni{
+        width: 270px !important;
+        margin-left: 40px;
+    }
+    #precio{
+        width: 120px;
+        padding-left: 25px;
+    } 
+    .medium input[type=submit]{
+        padding: 14px 20px;
+        font-size: 16px;
+        border: 1px solid rgba(0,0,0,0.3);
+        margin: 7px;
+        background: rgba(0, 255, 0, 0.3);
+        color: #333;
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+        border-radius: 7px;
+        cursor: pointer;
+    }   
+    .dp{ display: block; }
+    .di{ display: none; }
+    .dd:checked ~ .dp{ display: none ; }
+    .dd:checked ~ .di{ display: block; }
+      
+    #caja_uni{
+        width: 350px;
+    }
+    .ingerir{
+        background-color: #fff;
+        color: #333;
+        margin-top: 25px;
+        font-size: 18px;
+    }
+    .buttons{
+        margin-top: 25px;
+    }
+    /*--- nueva orden ---*/
+    .minus{
+        background: red;
+        color: #fff;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    .plusle{
+        background: green;
+        color: #fff;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        font-size: 35px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    .formate{
+        width: 30px;
+        font-size: 25px;
+        text-align: center;
+        color: #333;
+        border: none;
+    } 
+    .regre{
+        padding: 14px 20px;
+        color: #333;
+        background-color: rgba(255, 0, 0, 0.3);
+        border: 1px solid rgba(0,0,0,0.3);
+        text-decoration: none;
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+        border-radius: 7px;
+        margin-right: 20px;
+    }
+    .des_gre{
+        color: forestgreen;
+        margin-right: 25px;
+    }
+    .des_min{
+        font-size: 14px;
+        color: #333;
+    } 
+}

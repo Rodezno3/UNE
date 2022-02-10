@@ -1,0 +1,49 @@
+@charset "utf-8";   
+
+.color0{ background-color: rgb(255,255,255) !important }
+.color0-blur{ background-color: rgb(0,0,0,0.15) !important }
+
+.color1{ background-color: rgb(255, 100, 100) !important; }
+.color1-blur{ background-color: rgba(255, 100, 100, 0.4) !important; }
+.color2{ background-color: rgb(255, 130, 100) !important; }
+.color2-blur{ background-color: rgba(255, 130, 100, 0.4) !important; }
+.color3{ background-color: rgb(255, 170, 100) !important; }
+.color3-blur{ background-color: rgba(255, 170, 100, 0.4) !important; }
+.color4{ background-color: rgb(255, 245, 165) !important; }
+.color4-blur{ background-color: rgba(255, 245, 165, 0.4) !important; }
+
+.color5{ background-color: rgb(85, 133, 181) !important; }
+.color5-blur{ background-color: rgba(85, 133, 181, 0.4) !important; }
+.color6{ background-color: rgb(83, 168, 182) !important; }
+.color6-blur{ background-color: rgba(83, 168, 182, 0.4) !important; }
+.color7{ background-color: rgb(121, 194, 208) !important; }
+.color7-blur{ background-color: rgba(121, 194, 208, 0.4) !important; }
+.color8{ background-color: rgb(187, 228, 233) !important; }
+.color8-blur{ background-color: rgba(187, 228, 233, 0.4) !important; }
+
+.color9{ background-color: rgb(134, 110, 199) !important; }
+.color9-blur{ background-color: rgba(134, 110, 199, 0.4) !important; }
+.color10{ background-color: rgb(143, 113, 255) !important; }
+.color10-blur{ background-color: rgba(143, 113, 255, 0.4) !important; }
+.color11{ background-color: rgb(130, 172, 255) !important; }
+.color11-blur{ background-color: rgba(130, 172, 255, 0.4) !important; }
+.color12{ background-color: rgb(183, 251, 255) !important; }
+.color12-blur{ background-color: rgba(183, 251, 255, 0.4) !important; }
+
+.color13{ background-color: rgb(208, 246, 106) !important; }
+.color13-blur{ background-color: rgba(208, 246, 106, 0.4) !important; }
+.color14{ background-color: rgb(54, 193, 134) !important; }
+.color14-blur{ background-color: rgba(54, 193, 134, 0.4) !important; }
+.color15{ background-color: rgb(21, 138, 140) !important; }
+.color15-blur{ background-color: rgba(21, 138, 140, 0.4) !important; }
+.color16{ background-color: rgb(30, 82, 135 , 0.8) !important; }
+.color16-blur{ background-color: rgba(30, 82, 135 , 0.2) !important; }
+
+.color17{ background-color: rgb(228, 227, 227) !important; }
+.color17-blur{ background-color: rgba(228, 227, 227, 0.4) !important; }
+.color18{ background-color: rgb(132, 169, 172) !important; }
+.color18-blur{ background-color: rgba(132, 169, 172, 0.4) !important; }
+.color19{ background-color: rgb(59, 105, 120) !important; }
+.color19-blur{ background-color: rgba(59, 105, 120, 0.4) !important; }
+.color20{ background-color: rgb(32, 64, 81, 0.7) !important; }
+.color20-blur{ background-color: rgba(32, 64, 81, 0.2) !important; }
