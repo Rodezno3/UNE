@@ -42,7 +42,7 @@ date_default_timezone_set('America/El_Salvador');
                 <label for="" class="lab-descrip">Descripción: </label>
                 <input type="text" value="<?= $woz['Producto']; ?>" name="producto" id="descrip"><br>
                 <label for="" class="lab-precio">Precio: <span class="leter-d-edi">$</span></label>
-                <input type="text" value="<?= number_format($woz['Precio'] , 2); ?>" id="precio" name="precio">
+                <input type="number" value="<?= number_format($woz['Precio'] , 2); ?>" id="precio" name="precio" step="any">
                 <div class="buttons">
                     <a href="menu.php" class="regre">Regresar</a>
                     <input type="submit" value="Actualizar">
@@ -81,12 +81,12 @@ date_default_timezone_set('America/El_Salvador');
                     <article class="dp" <?php if($full){ if(empty($xow['DescuentoPo'])){ echo "style='display: none;'"; } } ?> >
                         <label for="" class="label-porcent">Descuento Porcentaje: <span class="leter-porcent">%</span></label>
                         <input type="number" placeholder="100" id="precio" name="percent"
-                        <?php if($full){ echo "value='".$xow['DescuentoPo']."'"; }  ?> max="100" min="0" >
+                        <?php if($full){ echo "value='".$xow['DescuentoPo']."'"; }  ?> max="100" min="0" step="any">
                     </article>
                     <article class="di" <?php if($full){ if(empty($xow['DescuentoDi'])){ echo "style='display: none;'"; } } ?> >
                         <label for="" class="label-d-des">Descuento Directo: <span class="leter-d-des">$</span></label>
                         <input type="number" placeholder="0.00" id="precio" name="directo"
-                        <?php if($full){ echo "value='".$xow['DescuentoDi']."'"; } ?> min="0" max="<?= $f['Precio']; ?>">
+                        <?php if($full){ echo "value='".$xow['DescuentoDi']."'"; } ?> min="0" max="<?= $f['Precio']; ?>" step="any">
                     </article>
                 </section>
                 <label class="fecha-in">Fecha de Inicio: </label>
@@ -113,7 +113,7 @@ date_default_timezone_set('America/El_Salvador');
                 <label for="">Producto: </label>
                 <input type="text" placeholder="" id="caja_uni" required name="pro_ing"><br>
                 <label for="" class="lab-precio">Precio: <span class="leter-d-edi">$</span></label>
-                <input type="text" placeholder="0.00" id="precio" required name="pre_ing"><br>
+                <input type="number" placeholder="0.00" id="precio" required name="pre_ing" step="any"><br>
                 <input type="text" value="<?= $_GET['tipo']; ?>" style="display: none;" name="tipo" required><br>
                 <a href="menu.php" class="regre">Regresar</a>
                 <input type="submit" value="Ingresar" class="ingerir">
