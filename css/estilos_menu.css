@@ -19,7 +19,7 @@ html,body{
     height: 100%;
 } 
 /* Diseño Mobile: 480px y menos. */
-
+ 
 /* Diseño Tablet: 481px a 768px. Hereda estilos de diseño mobile. */
 @media only screen and (min-width: 481px) {
      
@@ -356,7 +356,7 @@ html,body{
         text-align: center;
         color: #333;
         border: none;
-    } 
+    }  
     .regre{
         padding: 14px 20px;
         color: #333;
@@ -366,7 +366,7 @@ html,body{
         box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
         border-radius: 7px;
         margin-right: 20px;
-    }
+    } 
     .des_gre{
         color: forestgreen;
         margin-right: 25px;
@@ -375,4 +375,49 @@ html,body{
         font-size: 14px;
         color: #333;
     } 
+    
+    /* iconos */
+    .contenedor-icon{
+        border: 1px solid rgba(0,0,0,0.2); 
+        width: 40%;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .content-iconos{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 15px 0;
+    }
+    .box-icon{
+        width: 95px;
+        padding: 10px;
+        margin: 2px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .box-icon:hover{
+        background-color: rgba(0,0,0,0.15);
+    } 
+    .box-icon img{
+        width: 75%;
+        cursor: pointer;
+    }
+    .box-icon p{
+        font-size: 13.5px;
+        padding: 5px 0;
+        cursor: pointer;
+    }
+    .radio{
+        display: none;
+    }
+    /* Prueba */
+    #icon-prueba{
+        width: 100px;
+        height: 100px;
+        border: 1px solid rgb(0,0,0,0.5);
+    }
 }
