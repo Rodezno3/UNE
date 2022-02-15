@@ -416,8 +416,27 @@ html,body{
     }
     /* Prueba */
     #icon-prueba{
-        width: 100px;
-        height: 100px;
-        border: 1px solid rgb(0,0,0,0.5);
+        height: 120px;
+        width: 150px;
+        border: 1px solid rgba(0,0,0,0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 15px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative;
     }
+    #icon-prueba img{
+        width: 50px;
+    }
+    #icon-prueba p{
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+        color: #333; 
+    }
+    
 }

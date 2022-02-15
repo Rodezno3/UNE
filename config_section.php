@@ -30,16 +30,25 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/pre-icono.js"></script>
     <script type="text/javascript">
-    function color(num){
-        var colores = "color" + num;
-        $('#icon-prueba').removeAttr('class');
-        $('#icon-prueba').addClass(colores);
-    }
-    function images(img, gup){
-        $('#prub-img').removeAttr('src');
-        $('#prub-img').attr("src", "img/iconos/" + gup + "/" + img);
-    }
+        function color(num){
+            var colores = "color" + num;
+            $('#icon-prueba').removeAttr('class');
+            $('#icon-prueba').addClass(colores);
+        }
+        function iconPresent(gru , img){
+            $('#prub-img').removeAttr('src');
+            $('#prub-img').attr("src", "img/iconos/" + gru + "/" + img);
+        }
+        /*$('#titulo').focusin(function(){
+            /*var t = $(this).val();
+            console.log("hola");
+        });*/
+        function changes(text){
+            var x = $("#titulo").val();
+            document.getElementById("text-prueba").innerHTML = x;
+        }
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <!-- AJAX -->
 </head>
 <body>
     <?php require "php/header.php"; ?>
@@ -49,7 +58,7 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
         <form action="">
         <article>
             <label for=""></label>
-            <input type="text">
+            <input type="text" id="titulo" value="<?= $z['nombre']; ?>" step="1" name="tittle" onchange="changes('tittle')">
             <label for=""></label>
             <section class="contenedor-colors">
                 <?php
@@ -67,7 +76,7 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
                 <div id="icon-prueba">
                    <!-- solo prueba, despues quitar la ruta -->
                     <img src="img/iconos/antiguo/<?= $z['icono']; ?>" id="prub-img">
-                    <p></p>
+                    <p id="text-prueba"><?= $z['nombre'] ?></p>
                 </div>
                 <div class="info-prueba">
                     <ul>
@@ -116,7 +125,7 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
                 <section class="content-iconos">
                     <?php do{ ?>
                     <input type="radio" id="<?= $id; ?>" name="icono" value="<?= $c['id']; ?>" class="radio">
-                    <article class="box-icon" onclick="images('<?= $c['iconame']; ?>', '<?= $c['grupo'] ?>')">
+                    <article class="box-icon" onclick="iconPresent('<?= $c['grupo']; ?>', '<?= $c['icon']; ?>')">
                         <label for="<?= $id; ?>">
                         <div class="item-icon">
                             <img src="img/iconos/<?= $c['grupo'] . "/" . $c['icon']; ?>" alt="<?= $c['iconame']; ?>">
