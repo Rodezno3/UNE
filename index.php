@@ -25,6 +25,7 @@ if(isset($_POST['pin'])){
         $mensaje = "Ingrese los datos correctamente";
     }
 }
+/* Este mensaje es desde la pc nueva */
 ?>
 <!DOCTYPE html>
 <html lang="en">
