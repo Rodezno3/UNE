@@ -44,8 +44,8 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
             console.log("hola");
         });*/
         function changes(text){
-            var x = $("#titulo").val();
-            document.getElementById("text-prueba").innerHTML = x;
+            var t = $("#titulo").val();
+            document.getElementById("text-prueba").innerHTML = t;
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <!-- AJAX -->
