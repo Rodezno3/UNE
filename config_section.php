@@ -32,8 +32,12 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
     <script type="text/javascript">
         function color(num){
             var colores = "color" + num;
+            var blur = "color" + num + "-blur";
             $('#icon-prueba').removeAttr('class');
             $('#icon-prueba').addClass(colores);
+            
+            $('#barra-prueba').removeAttr('class');
+            $('#barra-prueba').addClass(blur);
         }
         function iconPresent(gru , img){
             $('#prub-img').removeAttr('src');
@@ -53,10 +57,9 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
 <body>
     <?php require "php/header.php"; ?>
     <h1 class="titu_edit">Editar Menú</h1>
-    <section>
         <h4>Opciones de Edici&oacute;n</h4>
-        <form action="">
-        <article>
+        <form action="php/fun/edit_config" method="post" class="form-content">
+        <article class="form-seccion">
             <label for=""></label>
             <input type="text" id="titulo" value="<?= $z['nombre']; ?>" step="1" name="tittle" onchange="changes('tittle')">
             <label for=""></label>
@@ -73,13 +76,13 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
                 <?php } ?>
             </section>
             <section>
-                <div id="icon-prueba">
+                <div id="icon-prueba" class="color<?= $z['color']; ?>">
                    <!-- solo prueba, despues quitar la ruta -->
                     <img src="img/iconos/antiguo/<?= $z['icono']; ?>" id="prub-img">
                     <p id="text-prueba"><?= $z['nombre'] ?></p>
                 </div>
                 <div class="info-prueba">
-                    <ul>
+                    <ul id="barra-prueba" class="color<?= $z['color']; ?>-blur">
                         <li class="shadow-icon"></li>
                         <li class="shadow-icon"></li>
                         <li class="shadow-icon"></li>
@@ -97,7 +100,7 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
                 </div>
             </section>
         </article>
-        <article>
+        <article class="form-seccion">
             <div>
                 <label for="">Icono Activo:</label>
                 <img src="" alt="">
@@ -137,8 +140,11 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
                 </section>
             <?php } ?>
             </section>
+            <section>
+                <button></button>
+                <button></button>
+            </section>
         </article>
         </form>
-    </section>
 </body>
 </html>
