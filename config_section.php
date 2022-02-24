@@ -43,13 +43,14 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
             $('#prub-img').removeAttr('src');
             $('#prub-img').attr("src", "img/iconos/" + gru + "/" + img);
         }
-        /*$('#titulo').focusin(function(){
-            /*var t = $(this).val();
-            console.log("hola");
-        });*/
         function changes(text){
             var t = $("#titulo").val();
             document.getElementById("text-prueba").innerHTML = t;
+        }
+        function text(txt){
+            var texto = "txt" + txt;
+            $('#text-prueba').removeAttr('class');
+            $('#text-prueba').addClass(texto);
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <!-- AJAX -->
@@ -57,7 +58,6 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
 <body>
     <?php require "php/header.php"; ?>
     <h1 class="titu_edit">Editar Menú</h1>
-        <h4>Opciones de Edici&oacute;n</h4>
         <form action="php/fun/edit_config" method="post" class="form-content">
         <article class="form-seccion">
             <label for=""></label>
@@ -66,14 +66,24 @@ $z = $beta->fetch(PDO::FETCH_ASSOC);
             <section class="contenedor-colors">
                 <?php
                 $color = 1;
-                for($j=1 ; $j<=5 ; $j++){ ?>
+                for($j=1 ; $j<=12 ; $j++){ ?>
                 <article class="box-colors">
-                    <?php for($k=1 ; $k<=4 ; $k++){ ?>
+                    <?php for($k=1 ; $k<=6 ; $k++){ ?>
                     <input type="radio" id="<?= $color; ?>" name="color" value="<?= $color; ?>" class="radio">
                     <label for="<?= $color; ?>" onclick="color(<?= $color; ?>)"><div class="colors color<?php echo $color; $color++; ?>"></div></label>
                     <?php } ?>
                 </article>
                 <?php } ?>
+            </section>
+            <section class="contenedor-colors-text">
+                <input type="radio" id="texto0" name="textcolor" value="0" class="radio">
+                <label for="texto0" onclick="text(0)">
+                    <div class="colors texto0"></div>
+                </label>
+                <input type="radio" id="texto1" name="textcolor" value="1" class="radio">
+                <label for="texto1" onclick="text(1)">
+                    <div class="colors texto1"></div>
+                </label>
             </section>
             <section>
                 <div id="icon-prueba" class="color<?= $z['color']; ?>">
